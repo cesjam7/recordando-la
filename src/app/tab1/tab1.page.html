@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Recordando.la
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+      <ion-item>
+        <ion-label position="floating">Escribe tu recuerdo</ion-label>
+        <ion-textarea [(ngModel)]="mensaje"></ion-textarea>
+      </ion-item>
+
+      <ion-button class="derecha" (click)="guardar()">
+        Enviar
+      </ion-button>
+
+    </ion-card>
+
+
+  <ion-list>
+  
+  
+    <ion-item *ngFor="let mensaje of listado">
+      <ion-avatar>
+        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      </ion-avatar>
+      <ion-label class="espacio-izquierda">
+        <h5>14/06/2018</h5>
+        {{ mensaje }}
+      </ion-label>
+    </ion-item>
+
+  
+  </ion-list>
+
+
+
+
+<ion-button color="danger" (click)="asustar()">
+  PRESIONA AQUI
+</ion-button>
+
+
+
+
+</ion-content>
